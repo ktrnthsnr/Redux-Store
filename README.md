@@ -1,6 +1,6 @@
 ﻿# Shop-Shop
 
-E-commerce online purchase and payment application focusing on state management in a MERN-stack application.
+E-commerce online application focusing on enhancing an existing website with global state management, offline functionality, and secure online payments in a MERN-stack application.
 
 ## GitHub URL
 
@@ -19,6 +19,15 @@ https://github.com/ktrnthsnr/shop-shop
 
 ## Description
 
+Working with an existing application, the enhancements for this e-commerce online codebase have been to:
+
+1. Implement global state management in a Redux-like store implemented by the React Content API, and write Redux-like actions and reducers.
+
+2. Add offline capabilities with IndexedDB so a user may shop if losing internet connectivity.
+
+3. Update code to handle secure online payments with a Stripe service.
+
+4. Update middleware and front-end GraphQL and React.
 
 
 ## Technology
