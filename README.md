@@ -101,6 +101,8 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 - This will bring up the development server and browser on your localhost to begin querying
 -  Use GraphQL at `http://localhost:3001/graphql`
 
+	![shop-shop](./shop-shop.jpg "shop-shop")
+
 ### Website
 - The website has been deployed to 
 	![insert](./insert.jpg "insert")
