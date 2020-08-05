@@ -104,9 +104,11 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 	![shop-shop](./shop-shop.jpg "shop-shop")
 
 ### Website
-- The website has been deployed to 
-	![insert](./insert.jpg "insert")
+- The website has been deployed before and after refactoring enhancements to,
 
+    - Before:  https://ktrnthsnr-shop.herokuapp.com/ from  git branch feature/global-store
+
+    - After:   <insert here>                         from last git master
 
 ## Testing
 
