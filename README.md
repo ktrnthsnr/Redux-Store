@@ -108,7 +108,7 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
     - Before:  https://ktrnthsnr-shop.herokuapp.com/ from  git branch feature/global-store
 
-    - After:   (still in work!)                      from last git master
+    - After:   ( still in work! )                      from last git master
 
 ## Testing
 
