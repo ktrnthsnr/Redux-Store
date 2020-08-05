@@ -40,7 +40,8 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 - After cloning the GitHub repo to your local drive, run the following in the VSCode command-line terminal
 - Install all components listed within the package.json file for npm
     -  cd to the root, then run
-    - $ `npm i`
+    - $ `npm i` or `npm install`   
+    - Seed the MongoDB collections $ `npm run seed`
 - Check if all the dependencies were installed, if not you may have to install per the client and server folder.
     - Server 
     - $ `cd server`
@@ -48,6 +49,49 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
      - Client
     - $ `cd client`
     - $ `npm i`
+
+- To start:
+ - Npm packages installed at root
+    ```
+    "dependencies": {
+    "if-env": "^1.0.4"
+    },
+    "devDependencies": {
+    "concurrently": "^5.1.0"
+    ```
+
+ - Npm packages installed at client
+     ```
+    "dependencies": {
+    "@apollo/react-hooks": "^3.1.3",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "apollo-boost": "^0.4.7",
+    "apollo-link-context": "^1.0.20",
+    "graphql": "^14.6.0",
+    "graphql-tag": "^2.10.3",
+    "jwt-decode": "^2.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1"
+    ```
+
+ - Npm packages installed at server
+    ```
+    "dependencies": {
+    "apollo-server-express": "^2.11.0",
+    "bcrypt": "^4.0.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.7"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.2"
+    ```
+- For this project added:
+    - 
 
 
 ## Usage
