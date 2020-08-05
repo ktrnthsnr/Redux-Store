@@ -96,12 +96,7 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 ## Usage
 
-- If cloning and installing locally, start by running in the terminal bash window,
-- $ `npm start`
-- This will bring up the development server and browser on your localhost to begin querying
--  Use GraphQL at `http://localhost:3001/graphql`
 
-	![shop-shop](./shop-shop.jpg "shop-shop")
 
 ### Website
 - The website has been deployed before and after refactoring enhancements to,
@@ -112,6 +107,12 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 ## Testing
 
+- If cloning and installing locally, start by running in the terminal bash window,
+- $ `npm start`
+- This will bring up the development server and browser on your localhost to begin querying
+-  Use GraphQL at `http://localhost:3001/graphql`
+
+	![shop-shop](./shop-shop.jpg "shop-shop")
 
 
 ## Contribution
