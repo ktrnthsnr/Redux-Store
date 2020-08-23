@@ -1,10 +1,14 @@
 ﻿# Shop-Shop
 
-E-commerce online application focusing on enhancing an existing website with global state management, offline functionality, and secure online payments in a MERN-stack application.
+E-commerce online application focusing on enhancing an existing website with Redux global state management, offline functionality, and secure online payments in a MERN-stack application.
 
 ## GitHub URL
 
 https://github.com/ktrnthsnr/shop-shop
+
+## Heroku website
+
+https://ktrnthsnr-shop.herokuapp.com/
 
 
 ## Table of Contents
@@ -21,13 +25,15 @@ https://github.com/ktrnthsnr/shop-shop
 
 Working with an existing application, the enhancements for this e-commerce online codebase have been to:
 
-1. Implement global state management in a Redux-like store implemented by the React Content API, and write Redux-like actions and reducers.
+1. Initial setup of the frontend and backend to receive the product data from the server, with Apollo caching the results.
 
-2. Add offline capabilities with IndexedDB so a user may shop if losing internet connectivity.
+2. Implement global state management in a Redux-like store implemented by the React Content API, and write Redux-like actions and reducers.
 
-3. Update code to handle secure online payments with a Stripe service.
+3. Add offline capabilities with IndexedDB so a user may shop if losing internet connectivity.
 
-4. Update middleware and front-end GraphQL and React.
+4. Update code to handle secure online payments with a Stripe service.
+
+5. Update middleware and front-end GraphQL and React.
 
 
 ## Technology
@@ -102,6 +108,9 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 -  Use GraphQL at `http://localhost:3001/graphql`
 
 	![shop-shop](./shop-shop.jpg "shop-shop")
+    
+- To seed the content, run 
+- $ `cd server` then `npm run seed`
 
 ### Website
 - The website has been deployed before and after refactoring enhancements to,
