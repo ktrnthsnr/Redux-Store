@@ -1,14 +1,16 @@
 //  CategoryMenu component tracks the category list from an Apollo query
 
+// after, implementing global state
+import React, { useEffect } from 'react';
+import { useStoreContext } from "../../utils/GlobalState";
+import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../utils/actions';
+
+
 // --before adding global state
 // import React from "react";
+
 import { useQuery } from '@apollo/react-hooks';
 import { QUERY_CATEGORIES } from "../../utils/queries";
-
-// after, implementing global state
-import { useStoreContext } from "../../utils/GlobalState";
-import React, { useEffect } from 'react';
-import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../utils/actions';
 
 
 // -- before global state
@@ -17,7 +19,7 @@ import { UPDATE_CATEGORIES, UPDATE_CURRENT_CATEGORY } from '../../utils/actions'
       // const categories = categoryData?.categories || [];
 
 // -- after global state
-function CategoryMenu({  }) { 
+function CategoryMenu() { 
     const [state, dispatch] = useStoreContext();
     const { categories } = state;
     const { data: categoryData } = useQuery(QUERY_CATEGORIES);

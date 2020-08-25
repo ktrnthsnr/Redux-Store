@@ -1,26 +1,55 @@
+// after adding global state
+import React, { useEffect } from 'react';
+import { useStoreContext } from '../../utils/GlobalState';
+import { UPDATE_PRODUCTS } from '../../utils/actions';
+
 // ProductList component shows products from an Apollo query
 
-import React from "react";
-import { useQuery } from '@apollo/react-hooks';
+// before adding global state
+  // import React from "react";
 
+import { useQuery } from '@apollo/react-hooks';
 import ProductItem from "../ProductItem";
 import { QUERY_PRODUCTS } from "../../utils/queries";
 import spinner from "../../assets/spinner.gif"
 
-function ProductList({ currentCategory }) {
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
+// -- before adding global state
+// function ProductList({ currentCategory }) {
 
-  const products = data?.products || [];
+// -- after adding global state
+function ProductList() {
 
-  function filterProducts() {
-    if (!currentCategory) {
-      return products;
+    const [state, dispatch] = useStoreContext();
+    const { currentCategory } = state;
+    const { loading, data } = useQuery(QUERY_PRODUCTS);
+    const products = data?.products || [];
+
+    useEffect(() => {
+      if (data) {
+        dispatch({
+          type: UPDATE_PRODUCTS,
+          products: data.products
+        });
+      }
+    }, [data, dispatch]);
+
+    function filterProducts() {
+      if (!currentCategory) {
+        return state.products;
+      }
+      return state.products.filter(product => product.category._id === currentCategory);
     }
 
-    return products.filter(product => product.category._id === currentCategory);
-  }
+    // -- before adding global state
+          // function filterProducts() {
+          //   if (!currentCategory) {
+          //     return products;
+          //   }
 
-  return (
+          //   return products.filter(product => product.category._id === currentCategory);
+          // }
+
+    return (
     <div className="my-2">
       <h2>Our Products:</h2>
       {products.length ? (
