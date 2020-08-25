@@ -115,7 +115,7 @@ export const reducer = (state, action) => {
             cart: []
         };
 
-        //cart visibility toggle
+        //cart visibility toggle right side of screen
         case TOGGLE_CART:
         return {
             ...state,

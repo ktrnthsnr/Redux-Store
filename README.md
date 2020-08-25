@@ -121,9 +121,11 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 ## Testing
 
-- Within the client folder, run `npm run test` to run various reducer tests.
-- The reducer queries to add, update, and remove from the categories, products and shopping cart are located under the client/src/utils/reducers.js. The tested to validate the functionality of the queries are located under client/src/__tests__ /reducers.test.js. 
+- Within the client folder, run `npm run test` to run various reducer action tests.
 
+- The reducer queries and associated jest tests to add, update, and remove from the categories, products and shopping cart are located under the `client/src/utils/reducers.js` and the tests to validate the functionality of the queries are located under `client/src/__tests__ /reducers.test.js`. 
+
+- Jest tests
 ![Jest tests](./JestTests-shop-shop.jpg "Jest tests")
 
 
