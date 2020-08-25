@@ -4,18 +4,33 @@
 import React, { useState } from "react";
 import ProductList from "../components/ProductList";
 import CategoryMenu from "../components/CategoryMenu";
+// shopping cart
+import Cart from '../components/Cart';
 
-// -- after global state
+
+// after shopping cart
 const Home = () => {
-    return (
+  return (
       <div className="container">
         <CategoryMenu />
         <ProductList />
+        <Cart />
       </div>
-    );  
-};
+      );  
+  };
+
 
 export default Home;
+
+// -- after global state
+  // const Home = () => {
+  //     return (
+  //       <div className="container">
+  //         <CategoryMenu />
+  //         <ProductList />
+  //       </div>
+  //     );  
+  // };
 
 // -- before global state
     //  const Home = () => {

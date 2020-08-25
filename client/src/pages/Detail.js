@@ -8,6 +8,8 @@ import spinner from '../assets/spinner.gif'
 // implementing global state, action and context Hook
 import { useStoreContext } from "../utils/GlobalState";
 import { UPDATE_PRODUCTS } from "../utils/actions";
+// shopping cart
+import Cart from '../components/Cart';
 
 // -- querying data from Apollo then destructuring the products with state
 function Detail() {
@@ -68,12 +70,15 @@ function Detail() {
           <img
             src={`/images/${currentProduct.image}`}
             alt={currentProduct.name}
+            
           />
+          
         </div>
       ) : null}
       {
         loading ? <img src={spinner} alt="loading" /> : null
       }
+          <Cart />    
     </>
   );
 };
