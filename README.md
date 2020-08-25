@@ -121,6 +121,7 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 ## Testing
 
+- Within the client folder, run `npm run test` to run various reducer tests
 
 
 ## Contribution

@@ -9,6 +9,9 @@ import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
+// make the global state available to all of our components
+import { StoreProvider } from "./utils/GlobalState";
+
 import OrderHistory from "./pages/OrderHistory";
 
 const client = new ApolloClient({
@@ -23,25 +26,49 @@ const client = new ApolloClient({
   uri: '/graphql',
 })
 
+// after adding state (everything between its JSX tags are considered the children of <StoreProvider>)
 function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <Nav />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/login" component={Login} />
-            <Route exact path="/signup" component={Signup} />
-            <Route exact path="/orderHistory" component={OrderHistory} />
-            <Route exact path="/products/:id" component={Detail} />
-            <Route component={NoMatch} />
-          </Switch>
+            <StoreProvider>
+                <Nav />
+                <Switch>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/login" component={Login} />
+                  <Route exact path="/signup" component={Signup} />
+                  <Route exact path="/orderHistory" component={OrderHistory} />
+                  <Route exact path="/products/:id" component={Detail} />
+                  <Route component={NoMatch} />
+                </Switch>
+            </StoreProvider>
         </div>
       </Router>
     </ApolloProvider>
-
   );
 }
+
+// before adding state
+          // function App() {
+          //   return (
+          //     <ApolloProvider client={client}>
+          //       <Router>
+          //         <div>
+          //           <Nav />
+          //           <Switch>
+          //             <Route exact path="/" component={Home} />
+          //             <Route exact path="/login" component={Login} />
+          //             <Route exact path="/signup" component={Signup} />
+          //             <Route exact path="/orderHistory" component={OrderHistory} />
+          //             <Route exact path="/products/:id" component={Detail} />
+          //             <Route component={NoMatch} />
+          //           </Switch>
+          //         </div>
+          //       </Router>
+          //     </ApolloProvider>
+
+          //   );
+          // }
 
 export default App;

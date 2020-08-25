@@ -1,6 +1,6 @@
 // actions - to define 3 parts of our state
-    // lists of products, categories recieved from the server by Apollo to store in a global state
-    // actions are listed as uppercase, but not required to be so
+    // lists of products, categories recieved from the server by Apollo to store in a global state object
+        // note, the actions are listed as uppercase, but not required to be so
 
 // list of products used by ProductList component
 export const UPDATE_PRODUCTS = "UPDATE_PRODUCTS";

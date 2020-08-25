@@ -1,3 +1,5 @@
+// The Home page component keeps track of the current category we are viewing.
+
 import React, { useState } from "react";
 import ProductList from "../components/ProductList";
 import CategoryMenu from "../components/CategoryMenu";
