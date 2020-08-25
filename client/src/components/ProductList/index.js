@@ -1,4 +1,4 @@
-// ProductList component displays products from an Apollo query
+// ProductList component shows products from an Apollo query
 
 import React from "react";
 import { useQuery } from '@apollo/react-hooks';
