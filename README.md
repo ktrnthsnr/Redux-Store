@@ -1,10 +1,14 @@
 ﻿# Shop-Shop
 
-E-commerce online application focusing on enhancing an existing website with global state management, offline functionality, and secure online payments in a MERN-stack application.
+E-commerce online application focusing on enhancing an existing website with Redux global state management, offline functionality, and secure online payments in a MERN-stack application.
 
 ## GitHub URL
 
 https://github.com/ktrnthsnr/shop-shop
+
+## Heroku website
+
+https://ktrnthsnr-shop.herokuapp.com/
 
 
 ## Table of Contents
@@ -19,15 +23,17 @@ https://github.com/ktrnthsnr/shop-shop
 
 ## Description
 
-Working with an existing application, the enhancements for this e-commerce online codebase have been to:
+Working with an existing application, the enhancements for this e-commerce online codebase have been to: 
 
-1. Implement global state management in a Redux-like store implemented by the React Content API, and write Redux-like actions and reducers.
+1. Complete initial setup of the frontend and backend to receive the product data from the server, with Apollo caching the results.
 
-2. Add offline capabilities with IndexedDB so a user may shop if losing internet connectivity.
+2. Within various components (not login\signup) such as CategoryMenu, ProductList and Home, removed local state management and replaced with global state management through a Redux-like store implemented by the React Content API, through Redux-like actions and reducers.
 
-3. Update code to handle secure online payments with a Stripe service.
+3. Add offline capabilities and functionality to persist data by implementing cached server-side data using IndexedDB so a user may continue to shop if temporarily losing internet connectivity. 
 
-4. Update middleware and front-end GraphQL and React.
+4. Update code to handle secure online payments with a Stripe service.
+
+5. Update middleware and front-end GraphQL and React.
 
 
 ## Technology
@@ -97,22 +103,30 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 ## Usage
 
 
+	![shop-shop](./shop-shop.jpg "shop-shop")
+    
+- To seed the content, run 
+- $ `cd server` then `npm run seed`
 
 ### Website
 - The website has been deployed before and after refactoring enhancements to,
 
     - Before:  https://ktrnthsnr-shop.herokuapp.com/ from  git branch feature/global-store
 
-    - After:   (still in work!)                      from last git master
+    - After:   ( still in work! )                      from last git master
 
 ## Testing
 
-- If cloning and installing locally, start by running in the terminal bash window,
-- $ `npm start`
-- This will bring up the development server and browser on your localhost to begin querying
--  Use GraphQL at `http://localhost:3001/graphql`
+- Within the client folder, run `npm run test` to run various reducer action tests.
 
-	![shop-shop](./shop-shop.jpg "shop-shop")
+- The reducer queries and associated jest tests to add, update, and remove from the categories, products and shopping cart are located under the `client/src/utils/reducers.js` and the tests to validate the functionality of the queries are located under `client/src/__tests__ /reducers.test.js`. 
+
+- Jest tests
+![Jest tests](./JestTests-shop-shop.jpg "Jest tests")
+
+- Validate offline functionality is stored in the IndexedDB by starting up DevTools within the Chrome browser (right-click > Inspect or F12), then under the Network tab, change the throttling setting to Offline. Then under devTools, Applications, under the Storage > IndexedDB, view the cart, categories, and products key\value pairs listed under the IDB. Alternatively, you may clone the application and after installations have been completed, cd to the client directory, and run npm start, which will only start the client, not the server, to validate the offline functionality.
+- IndexedDB is storing the data while the application is not connected to the the internet, a setup for performance web application (PWA).
+- ![IDB](./IndexedDB.jpg "IDB").  
 
 
 ## Contribution
