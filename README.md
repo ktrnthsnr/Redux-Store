@@ -128,7 +128,7 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 - Jest tests
 ![Jest tests](./JestTests-shop-shop.jpg "Jest tests")
 
-- Validate offline functionality is stored in the IndexedDB by starting up DevTools within the Chrome browser (right-click > Inspect or F12), then under the Network tab, set throttling setting to Offline. Then under devTools, Applications, under the Storage > IndexedDB, view the cart, categories, and products key\value pairs listed under the IDB. Alternatively, you may clone the application and after installations have been completed, cd to the client directory, and run npm start, which will only start the client, not the server, to validate the offline functionality.
+- Validate offline functionality is stored in the IndexedDB by starting up DevTools within the Chrome browser (right-click > Inspect or F12), then under the Network tab, change the throttling setting to Offline. Then under devTools, Applications, under the Storage > IndexedDB, view the cart, categories, and products key\value pairs listed under the IDB. Alternatively, you may clone the application and after installations have been completed, cd to the client directory, and run npm start, which will only start the client, not the server, to validate the offline functionality.
 - IndexedDB is storing the data while the application is not connected to the the internet, a setup for performance web application (PWA).
 - ![IDB](./IndexedDB.jpg "IDB").  
 
