@@ -46,7 +46,7 @@ import {
 export const reducer = (state, action) => {
     switch (action.type) {
 
-        // 1. tesitng the products array
+        // tesitng the products array
             // if action type value is the value of `UPDATE_PRODUCTS`, return a new state object with an updated products array
         case UPDATE_PRODUCTS:
             return {
@@ -54,15 +54,15 @@ export const reducer = (state, action) => {
             products: [...action.products]
         };
 
-            // 2. testing the category array
-        // if action type value is the value of `UPDATE_CATEGORIES`, return a new state object with an updated categories array
+        // testing the category array
+            // if action type value is the value of `UPDATE_CATEGORIES`, return a new state object with an updated categories array
         case UPDATE_CATEGORIES:
             return {
             ...state,
             categories: [...action.categories]
         };
 
-        // 3. 
+        // update category
         case UPDATE_CURRENT_CATEGORY:
         return {
             ...state,
@@ -77,12 +77,14 @@ export const reducer = (state, action) => {
             cart: [...state.cart, action.product]
         };    
 
+        // add multiple items to cart
         case ADD_MULTIPLE_TO_CART:
         return {
             ...state,
             cart: [...state.cart, ...action.products],
         };
 
+        // remove items from cart
         case REMOVE_FROM_CART:
         let newState = state.cart.filter(product => {
             return product._id !== action._id;

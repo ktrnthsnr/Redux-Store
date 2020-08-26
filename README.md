@@ -25,9 +25,9 @@ https://ktrnthsnr-shop.herokuapp.com/
 
 Working with an existing application, the enhancements for this e-commerce online codebase have been to: 
 
-1. Initial setup of the frontend and backend to receive the product data from the server, with Apollo caching the results.
+1. Complete initial setup of the frontend and backend to receive the product data from the server, with Apollo caching the results.
 
-2. In some components (not login\signup) such as CategoryMenu, ProductList and Home, remove state management and add global state objects. Implement global state management in a Redux-like store implemented by the React Content API, and write Redux-like actions and reducers.
+2. Within various components (not login\signup) such as CategoryMenu, ProductList and Home, removed local state management and replaced with global state management through a Redux-like store implemented by the React Content API, through Redux-like actions and reducers.
 
 3. Add offline capabilities with IndexedDB so a user may shop if losing internet connectivity.
 
