@@ -19,34 +19,62 @@ import Cart from '../components/Cart';
 
 // -- querying data from Apollo then destructuring the products with state
 function Detail() {
-  // -- before adding global state
-    // const products = data?.products || [];
+    // -- before adding global state
+      // const products = data?.products || [];
 
-  // after adding global state
-  const [ state, dispatch ] = useStoreContext();
-  const { id } = useParams();
-  const [ currentProduct, setCurrentProduct ] = useState({})
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
-  const { products } = state;
+    // after adding global state
+    const [ state, dispatch ] = useStoreContext();
+    const { id } = useParams();
+    const [ currentProduct, setCurrentProduct ] = useState({})
+    const { loading, data } = useQuery(QUERY_PRODUCTS);
+    // const { products } = state;
+    const { products, cart } = state;
+    
+      
+    // -- add to cart
+    const addToCart = () => {
+        const itemInCart = cart.find((cartItem) => cartItem._id === id);
+    
+      if (itemInCart) {
+        dispatch({
+          type: UPDATE_CART_QUANTITY,
+          _id: id,
+          purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+        });
+      } else {
+        dispatch({
+          type: ADD_TO_CART,
+          product: { ...currentProduct, purchaseQuantity: 1 }
+        });
+      }
+    };
 
-  // cart
-  const addToCart = () => {
-    dispatch({
-      type: ADD_TO_CART,
-      product: { ...currentProduct, purchaseQuantity: 1 }
-    });
-  };
-
-  useEffect(() => {
-    if (products.length) {
-      setCurrentProduct(products.find(product => product._id === id));
-    } else if (data) {
+    // -- remove from cart
+    const removeFromCart = () => {
       dispatch({
-        type: UPDATE_PRODUCTS,
-        products: data.products
+        type: REMOVE_FROM_CART,
+        _id: currentProduct._id
       });
-    }
-  }, [products, data, dispatch, id]);
+    };
+
+  // -- previous, cart
+        // const addToCart = () => {
+        //   dispatch({
+        //     type: ADD_TO_CART,
+        //     product: { ...currentProduct, purchaseQuantity: 1 }
+        //   });
+        // };
+
+        // useEffect(() => {
+        //   if (products.length) {
+        //     setCurrentProduct(products.find(product => product._id === id));
+        //   } else if (data) {
+        //     dispatch({
+        //       type: UPDATE_PRODUCTS,
+        //       products: data.products
+        //     });
+        //   }
+        // }, [products, data, dispatch, id]);
 
  // -- before global state
   // useEffect(() => {
@@ -75,7 +103,13 @@ function Detail() {
             {" "}
             {/* <button>Add to Cart</button> */}
             <button onClick={addToCart}>Add to cart</button>
-            <button>Remove from Cart</button>
+            {/* <button>Remove from Cart</button> */}
+            <button 
+                disabled={!cart.find(p => p._id === currentProduct._id)} 
+                onClick={removeFromCart}
+              >
+                Remove from Cart
+            </button>
           </p>
 
           <img
