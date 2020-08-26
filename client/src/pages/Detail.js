@@ -4,6 +4,9 @@ import { useQuery } from '@apollo/react-hooks';
 import { QUERY_PRODUCTS } from "../utils/queries";
 import spinner from '../assets/spinner.gif'
 
+// indexedDB
+import { idbPromise } from "../utils/helpers";
+
 // implementing global state, action and context Hook
 import { useStoreContext } from "../utils/GlobalState";
 // import { UPDATE_PRODUCTS } from "../utils/actions";
@@ -81,6 +84,34 @@ function Detail() {
   //     setCurrentProduct(products.find(product => product._id === id));
   //   }
   // }, [products, id]);
+
+  // indexedDB
+  useEffect(() => {
+        // in global store
+        if (products.length) {
+          setCurrentProduct(products.find(product => product._id === id));
+        } 
+        // retrieved from the server
+        else if (data) {
+          dispatch({
+            type: UPDATE_PRODUCTS,
+            products: data.products
+          });
+      
+          data.products.forEach((product) => {
+            idbPromise('products', 'put', product);
+          });
+        }
+        // retrieve cache from the idb
+        else if (!loading) {
+          idbPromise('products', 'get').then((indexedProducts) => {
+            dispatch({
+              type: UPDATE_PRODUCTS,
+              products: indexedProducts
+            });
+          });
+        }
+  }, [products, data, loading, dispatch, id]);
 
   return (
     <>
