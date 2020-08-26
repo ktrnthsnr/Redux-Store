@@ -29,7 +29,7 @@ Working with an existing application, the enhancements for this e-commerce onlin
 
 2. Within various components (not login\signup) such as CategoryMenu, ProductList and Home, removed local state management and replaced with global state management through a Redux-like store implemented by the React Content API, through Redux-like actions and reducers.
 
-3. Add offline capabilities by implementing cached server-side data using IndexedDB so a user may shop if losing internet connectivity. 
+3. Add offline capabilities and functionality to persist data by implementing cached server-side data using IndexedDB so a user may continue to shop if temporarily losing internet connectivity. 
 
 4. Update code to handle secure online payments with a Stripe service.
 
