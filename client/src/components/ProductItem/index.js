@@ -8,9 +8,13 @@ import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 
 function ProductItem(item) {
 
+  const [ state, dispatch ] = useStoreContext();
+  // -- update action
+  const { cart } = state;
+
   // -- previous
         // // -- adding state and toggle
-        const [ state, dispatch ] = useStoreContext();
+  
 
         // const addToCart = () => {
         //   dispatch({
@@ -21,32 +25,31 @@ function ProductItem(item) {
 
         // console.log(state);
 
-        const {
-          image,
-          name,
-          _id,
-          price,
-          quantity
-        } = item;
+  const {
+    image,
+    name,
+    _id,
+    price,
+    quantity
+  } = item;
 
-  // -- update action
-  const { cart } = state;
   const addToCart = () => {
-  // -- find the cart item with the matching id
-  const itemInCart = cart.find((cartItem) => cartItem._id === _id);
-  // -- if there was a match, call UPDATE with a new purchase quantity
-  if (itemInCart) {
-    dispatch({
-      type: UPDATE_CART_QUANTITY,
-      _id: _id,
-      purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
-    });
-  } else {
-    dispatch({
-      type: ADD_TO_CART,
-      product: { ...item, purchaseQuantity: 1 }
-    });
-  }
+      // -- find the cart item with the matching id
+      const itemInCart = cart.find((cartItem) => cartItem._id === _id);
+      // -- if there was a match, call UPDATE with a new purchase quantity
+      if (itemInCart) {
+        dispatch({
+          type: UPDATE_CART_QUANTITY,
+          _id: _id,
+          purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+        });
+      } else {
+        dispatch({
+          type: ADD_TO_CART,
+          product: { ...item, purchaseQuantity: 1 }
+        });
+    }
+      
 };
 
   

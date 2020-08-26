@@ -29,11 +29,10 @@ function Detail() {
     const { loading, data } = useQuery(QUERY_PRODUCTS);
     // const { products } = state;
     const { products, cart } = state;
-    
       
     // -- add to cart
     const addToCart = () => {
-        const itemInCart = cart.find((cartItem) => cartItem._id === id);
+      const itemInCart = cart.find((cartItem) => cartItem._id === id);
     
       if (itemInCart) {
         dispatch({
