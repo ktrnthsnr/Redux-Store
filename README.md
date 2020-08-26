@@ -27,7 +27,7 @@ Working with an existing application, the enhancements for this e-commerce onlin
 
 1. Complete initial setup of the frontend and backend to receive the product data from the server, with Apollo caching the results.
 
-2. Within various components (not login\signup) such as CategoryMenu, ProductList and Home, removed local state management and replaced with global state management through a Redux-like store implemented by the React Content API, through Redux-like actions and reducers.
+2. Removed local state management and replaced with global state management within various components (not login\signup) such as CategoryMenu, ProductList and Home - through a Redux-like store implemented by the React Content API, through Redux-like actions and reducers.
 
 3. Add offline capabilities and functionality to persist data by implementing cached server-side data using IndexedDB so a user may continue to shop if temporarily losing internet connectivity. 
 
@@ -102,6 +102,10 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 ## Usage
 
+- If cloning and installing locally, start by running in the terminal bash window,
+- $ `npm start`
+- This will bring up the development server and browser on your localhost to begin querying
+-  Use GraphQL at `http://localhost:3001/graphql`
 
 	![shop-shop](./shop-shop.jpg "shop-shop")
     
