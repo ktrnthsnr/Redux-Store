@@ -4,11 +4,17 @@ E-commerce online application focusing on enhancing an existing website with Red
 
 ## GitHub URL
 
-https://github.com/ktrnthsnr/Redux-Store
+- Redux-Shop Challenge: https://github.com/ktrnthsnr/Redux-Store
+
+- Shop-Shop Module w\feature working branches: https://github.com/ktrnthsnr/shop-shop
+
 
 ## Heroku website
 
-https://ktrnthsnr-redux-store.herokuapp.com/
+- Challenge Redux-Shop website: https://ktrnthsnr-redux-store.herokuapp.com/
+
+- Module Shop-Shop website: https://ktrnthsnr-shop.herokuapp.com/
+
 
 ## Table of Contents
 
