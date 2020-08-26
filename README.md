@@ -8,11 +8,7 @@ https://github.com/ktrnthsnr/Redux-Store
 
 ## Heroku website
 
-- The website has been deployed before and after refactoring enhancements which are listed under the #description to these Heroku sites,
-
-    - Before:  https://ktrnthsnr-shop.herokuapp.com/ 
-
-    - After:   https://ktrnthsnr-redux-store.herokuapp.com/
+https://ktrnthsnr-redux-store.herokuapp.com/
 
 ## Table of Contents
 
@@ -116,11 +112,10 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 - $ `cd server` then `npm run seed`
 
 ### Website
-- The website has been deployed before and after refactoring enhancements which are listed under the #description  to these Heroku sites,
+- The website has been deployed to Heroku through an mLab resource add-on at this location:
 
-    - Before:  https://ktrnthsnr-shop.herokuapp.com/ 
+https://ktrnthsnr-redux-store.herokuapp.com/
 
-    - After:   https://ktrnthsnr-redux-store.herokuapp.com/
 
 ## Testing
 
