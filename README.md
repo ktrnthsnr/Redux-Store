@@ -1,10 +1,10 @@
-﻿# Redux-Shop
+﻿# Redux-Store
 
 E-commerce online application focusing on enhancing an existing website with Redux global state management, offline functionality, and secure online payments in a MERN-stack application.
 
 ## GitHub URL
 
-- Redux-Shop Challenge: https://github.com/ktrnthsnr/Redux-Store
+- Redux-Store Challenge: https://github.com/ktrnthsnr/Redux-Store
 
 - Shop-Shop Module w\feature working branches: https://github.com/ktrnthsnr/shop-shop
 
@@ -43,7 +43,7 @@ Working with an existing application, the enhancements for this e-commerce onlin
 
 ## Technology
 
-Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, GraphQL Playground, Apollo Server, Apollo-Client, graphql-tag, apollo-server-express, apollo-boost, React Router, react-router-dom, apollo/react-hooks, if-env, concurrently, jsonwebtoken, jwt-decode, faker, nodemon, bcrypt, moment
+Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, GraphQL Playground, Apollo Server, Apollo-Client, graphql-tag, apollo-server-express, apollo-boost, React Router, react-router-dom, apollo/react-hooks, if-env, concurrently, jsonwebtoken, jwt-decode, faker, nodemon, bcrypt, moment, stripe
 
 ## Installations
 
@@ -60,50 +60,6 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
      - Client
     - $ `cd client`
     - $ `npm i`
-
-- To start:
- - Npm packages installed at root
-    ```
-    "dependencies": {
-    "if-env": "^1.0.4"
-    },
-    "devDependencies": {
-    "concurrently": "^5.1.0"
-    ```
-
- - Npm packages installed at client
-     ```
-    "dependencies": {
-    "@apollo/react-hooks": "^3.1.3",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "apollo-boost": "^0.4.7",
-    "apollo-link-context": "^1.0.20",
-    "graphql": "^14.6.0",
-    "graphql-tag": "^2.10.3",
-    "jwt-decode": "^2.2.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1"
-    ```
-
- - Npm packages installed at server
-    ```
-    "dependencies": {
-    "apollo-server-express": "^2.11.0",
-    "bcrypt": "^4.0.1",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.7"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.2"
-    ```
-- For this project added:
-    - 
-
 
 ## Usage
 
@@ -127,15 +83,20 @@ https://ktrnthsnr-redux-store.herokuapp.com/
 
 - Within the client folder, run `npm run test` to run various reducer action tests.
 
-- The reducer queries and associated jest tests to add, update, and remove from the categories, products and shopping cart are located under the `client/src/utils/reducers.js` and the tests to validate the functionality of the queries are located under `client/src/__tests__ /reducers.test.js`. 
-
 - Jest tests
-![Jest tests](./JestTests-shop-shop.jpg "Jest tests")
+    - The reducer queries and associated jest tests to add, update, and remove from the categories, products and shopping cart are located under the `client/src/utils/reducers.js` and the tests to validate the functionality of the queries are located under `client/src/__tests__ /reducers.test.js`. 
+    - ![Jest tests](./JestTests-shop-shop.jpg "Jest tests")
 
-- Validate offline functionality is stored in the IndexedDB by starting up DevTools within the Chrome browser (right-click > Inspect or F12), then under the Network tab, change the throttling setting to Offline. Then under devTools, Applications, under the Storage > IndexedDB, view the cart, categories, and products key\value pairs listed under the IDB. Alternatively, you may clone the application and after installations have been completed, cd to the client directory, and run npm start, which will only start the client, not the server, to validate the offline functionality.
-- IndexedDB is storing the data while the application is not connected to the the internet, a setup for performance web application (PWA).
-- ![IDB](./IndexedDB.jpg "IDB").  
+- Validating offline functionality through IndexedDB
+    - Validate offline functionality is stored in the IndexedDB by starting up DevTools within the Chrome browser (right-click > Inspect or F12), then under the Network tab, change the throttling setting to Offline. Then under devTools, Applications, under the Storage > IndexedDB, view the cart, categories, and products key\value pairs listed under the IDB. Alternatively, you may clone the application and after installations have been completed, cd to the client directory, and run npm start, which will only start the client, not the server, to validate the offline functionality.
+    - IndexedDB is storing the data while the application is not connected to the the internet, a setup for performance web application (PWA).
+    - ![IDB](./IndexedDB.jpg "IDB").  
 
+- GraphQL Playground
+    - To query GraphQL for product detail, see graphql_queries.md for more info and a few samples.
+    - ![GraphQL](./graphql_queryResult.jpg "GraphQL")
+    - Corresponding Stripe result from the similar IDs
+    - ![Stripe](./stripe.jpg "Stripe")
 
 ## Contribution
 
