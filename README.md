@@ -1,15 +1,18 @@
-﻿# Shop-Shop
+﻿# Redux-Shop
 
 E-commerce online application focusing on enhancing an existing website with Redux global state management, offline functionality, and secure online payments in a MERN-stack application.
 
 ## GitHub URL
 
-https://github.com/ktrnthsnr/shop-shop
+https://github.com/ktrnthsnr/Redux-Store
 
 ## Heroku website
 
-https://ktrnthsnr-shop.herokuapp.com/
+- The website has been deployed before and after refactoring enhancements which are listed under the #description to these Heroku sites,
 
+    - Before:  https://ktrnthsnr-shop.herokuapp.com/ 
+
+    - After:   https://ktrnthsnr-redux-store.herokuapp.com/
 
 ## Table of Contents
 
@@ -113,11 +116,11 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 - $ `cd server` then `npm run seed`
 
 ### Website
-- The website has been deployed before and after refactoring enhancements to,
+- The website has been deployed before and after refactoring enhancements which are listed under the #description  to these Heroku sites,
 
-    - Before:  https://ktrnthsnr-shop.herokuapp.com/ from  git branch feature/global-store
+    - Before:  https://ktrnthsnr-shop.herokuapp.com/ 
 
-    - After:   ( still in work! )                      from last git master
+    - After:   https://ktrnthsnr-redux-store.herokuapp.com/
 
 ## Testing
 
