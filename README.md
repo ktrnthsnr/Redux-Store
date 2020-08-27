@@ -1,6 +1,6 @@
 ﻿# Redux-Store
 
-E-commerce online application focusing on enhancing an existing website with Redux global state management, offline functionality, and secure online payments in a MERN-stack application.
+E-commerce online application focusing on enhancing an existing website with Redux global state management, offline functionality, and secure online payments through Stripe built in a MERN-stack application.
 
 ## GitHub URL
 
@@ -36,7 +36,7 @@ Working with an existing application, the enhancements for this e-commerce onlin
 
 3. Add offline capabilities and functionality to persist data by implementing cached server-side data using IndexedDB so a user may continue to shop if temporarily losing internet connectivity. 
 
-4. Update code to handle secure online payments with a Stripe service.
+4. Update code to handle secure online payments coordinated with a Stripe payment service.
 
 5. Update middleware and front-end GraphQL and React.
 
