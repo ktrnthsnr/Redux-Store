@@ -1,6 +1,6 @@
 ﻿# Redux-Store
 
-E-commerce online application focusing on enhancing an existing website with Redux global state management, offline functionality, and secure online payments through Stripe built in a MERN-stack application.
+E-commerce online application focusing on enhancing an existing website with Redux global state management, offline functionality, and secure online payments through a Stripe API built in a MERN-stack application.
 
 ## GitHub URL
 
@@ -30,15 +30,15 @@ E-commerce online application focusing on enhancing an existing website with Red
 
 Working with an existing application, the enhancements for this e-commerce online codebase have been to: 
 
-1. Complete initial setup of the frontend and backend to receive the product data from the server, with Apollo caching the results.
+1. Completed initial setup of the frontend and backend to receive the product data from the server, with Apollo caching the results.
 
-2. Removed local state management and replaced with global state management within various components (not login\signup) such as CategoryMenu, ProductList and Home - through a Redux-like store implemented by the React Content API, through Redux-like actions and reducers.
+2. Removed local state management and replaced with global state management within various components (not login\signup) such as CategoryMenu, ProductList and Home - through a Redux-like store implemented by the React Context API, through Redux-like actions and reducers.
 
-3. Add offline capabilities and functionality to persist data by implementing cached server-side data using IndexedDB so a user may continue to shop if temporarily losing internet connectivity. 
+3. Added offline capabilities and functionality to persist data by implementing cached server-side data using IndexedDB so a user may continue to shop if temporarily losing internet connectivity. Once back online, the transaction was saved to the MongoDB.
 
-4. Update code to handle secure online payments coordinated with a Stripe payment service.
+4. Updated code to handle secure online payments coordinated with a Stripe payment service.
 
-5. Update middleware and front-end GraphQL and React.
+5. Updated middleware and front-end GraphQL and React.
 
 
 ## Technology
