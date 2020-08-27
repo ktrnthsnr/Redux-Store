@@ -24,6 +24,7 @@ function Success() {
               idbPromise('cart', 'delete', item);
             });
           }
+        //   redirect after stripe success page to the home page 
           setTimeout(function(){ window.location.assign("/")}, 3000);
     }
 
