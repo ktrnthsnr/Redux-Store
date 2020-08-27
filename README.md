@@ -43,7 +43,7 @@ Working with an existing application, the enhancements for this e-commerce onlin
 
 ## Technology
 
-Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, GraphQL Playground, Apollo Server, Apollo-Client, graphql-tag, apollo-server-express, apollo-boost, React Router, react-router-dom, apollo/react-hooks, if-env, concurrently, jsonwebtoken, jwt-decode, faker, nodemon, bcrypt, moment, stripe
+Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, GraphQL Playground, Apollo Server, Apollo-Client, graphql-tag, apollo-server-express, apollo-boost, React Router, react-router-dom, apollo/react-hooks, if-env, concurrently, jsonwebtoken, jwt-decode, faker, nodemon, bcrypt, moment, stripe, @stripe/stripe-js
 
 ## Installations
 
@@ -60,6 +60,12 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
      - Client
     - $ `cd client`
     - $ `npm i`
+
+- Stripe npm installations included
+    - cd to the server directory, then run in the bash terminal window 
+    - $ `npm install stripe`
+    - cd to the client directory, then run in the bash terminal window 
+    - $ `npm install @stripe/stripe-js`
 
 ## Usage
 

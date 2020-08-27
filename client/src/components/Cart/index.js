@@ -13,9 +13,19 @@ import { idbPromise } from "../../utils/helpers";
 // import React from 'react';
 // import { TOGGLE_CART } from '../../utils/actions';
 
+// stripe
+import { QUERY_CHECKOUT } from '../../utils/queries';
+import { loadStripe } from '@stripe/stripe-js';
+import { useLazyQuery } from '@apollo/react-hooks';
+const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
+
+
 const Cart = () => {
 
   const [state, dispatch] = useStoreContext();
+
+  //stripe
+  const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
   // indexedDB
   useEffect(() => {
@@ -40,6 +50,30 @@ const Cart = () => {
     });
     return sum.toFixed(2);
   }
+
+  // stripe
+  function submitCheckout() {
+    const productIds = [];
+
+    getCheckout({
+      variables: { products: productIds }
+    });
+  
+    state.cart.forEach((item) => {
+      for (let i = 0; i < item.purchaseQuantity; i++) {
+        productIds.push(item._id);
+      }
+    });
+  }
+
+  // stripe
+  useEffect(() => {
+    if (data) {
+      stripePromise.then((res) => {
+        res.redirectToCheckout({ sessionId: data.checkout.session });
+      });
+    }
+  }, [data]);
 
   // display the closed shopping cart icon
   if (!state.cartOpen) {
@@ -66,9 +100,12 @@ const Cart = () => {
                 <strong>Total: ${calculateTotal()}</strong>
                 {
                   Auth.loggedIn() ?
-                    <button>
-                      Checkout
-                    </button>
+                    // <button>
+                    //   Checkout
+                    // </button>
+                    <button onClick={submitCheckout}>
+                    Checkout
+                  </button>
                     :
                     <span>(log in to check out)</span>
                 }
