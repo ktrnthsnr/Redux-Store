@@ -53,7 +53,8 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
     -  cd to the root, then run
     - $ `npm i` or `npm install`   
     - Seed the MongoDB collections $ `npm run seed`
-- Check if all the dependencies were installed, if not you may have to install per the client and server folder.
+- Check if all the dependencies were installed per the package.json files with the client, server, and root directories. If any are missing you may have to install the npm packages from each of the folders in addition to the root folder. For example, run in the bash terminal command window,
+
     - Server 
     - $ `cd server`
     - $ `npm i`
