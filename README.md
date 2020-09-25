@@ -70,9 +70,11 @@ Node.js, JavaScript, ES6, npm MongoDB, Mongoose, Express.js, React.js, GraphQL, 
 
 ## Usage
 
-- If cloning and installing locally, start by running in the terminal bash window,
+- If cloning and installing locally, after running `npm i` or installations, start the application by running in the terminal bash window,
 - $ `npm start`
-- This will bring up the development server and browser on your localhost to begin querying
+- This will bring up the development server and browser on your localhost `http://localhost:3000/`
+- To populate the content, start the mongodb (cmd > services.msc > start the MongoDB service), then run in the terminal `npm run seed`.  To view the products, you may need to restart the application. Ctrl-C, then run `npm start` again, and visit the localhost, port 3000.
+- To begin querying within the GraphQL Playground, go to this local endpoint,
 -  Use GraphQL at `http://localhost:3001/graphql`
 
 	![shop-shop](./shop-shop.jpg "shop-shop")
